@@ -1,0 +1,135 @@
+@include media-sm {
+    .header {
+        padding: 2.2em 0.5em;
+        position: relative;
+        text-align: center;
+        margin: 2em 0em;
+        .header-bck {
+            background: url(../images/pattern-circles.svg);
+            background-size: cover;
+            position: absolute;
+            height: 146px;
+            width: 146px;
+            z-index: -1;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .heading {
+            margin-bottom: .6em;
+            color: $darkDesaturatedBlue;
+            font-size: 1.2em;
+            font-weight: 600;
+        }
+        .para {
+            font-size: 0.8em;
+            color: $grayishBlue;
+            span {
+                display: block;
+                padding-top: .5em;
+            }
+        }
+    }
+    .main-container {
+        background: white;
+        width: 90vw;
+        display: grid;
+        margin: 1em 0em;
+        border-radius: 0.5em;
+        grid-template-columns: auto;
+        grid-template-rows: repeat(7, auto);
+        place-items: center;
+        padding: 2em 0em;
+        text-align: center;
+        .views {
+            grid-column: 1/2;
+            grid-row: 1/2;
+            font-size: 0.7em;
+            width: 175px;
+            color: $grayishBlue;
+            #view {
+                width: 100px;
+            }
+        }
+        .money {
+            grid-column: 1/2;
+            grid-row: 3/4;
+            font-size: 0.8em;
+            color: $grayishBlue;
+            padding: 1em;
+            span {
+                font-weight: 700;
+                color: $darkDesaturatedBlue;
+            }
+        }
+    }
+    .range {
+        grid-column: 1/2;
+        grid-row: 2/3;
+        width: 95%;
+        padding: 1em 2em 1.5em 2em;
+    }
+    .feature {
+        grid-column: 1/2;
+        grid-row: 6/7;
+        font-size: 0.7em;
+        color: $grayishBlue;
+        padding: 2em 1em 1em 1em;
+    }
+    .divide {
+        grid-column: 1/2;
+        grid-row: 5/6;
+    }
+    .start-btn {
+        grid-column: 1/2;
+        grid-row: 7/8;
+    }
+    .middle-btns {
+        grid-column: 1/2;
+        grid-row: 4/5;
+        font-size: 0.6em;
+        color: $grayishBlue;
+        font-weight: 400;
+        display: flex;
+        text-align: center;
+        justify-content: flex-end;
+        width: 100%;
+        padding-bottom: 1em;
+        .discount {
+            color: $redText;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: $grayishRedBack;
+            font-size: 0.6rem;
+            border-radius: 10px;
+            padding: 0 0.5em;
+        }
+        .item {
+            margin: 2em .5em;
+        }
+    }
+}
+
+@include media-md {
+    .main-container {
+        width: 60vw;
+        .money {
+            .cost {
+                font-size: 1.5em;
+            }
+        }
+        .middle-btns {
+            font-size: 0.6em
+        }
+    }
+}
+
+@include media-lg {
+    .main-container {
+        width: 50vw;
+        .middle-btns {
+            width: 90%;
+        }
+    }
+}
